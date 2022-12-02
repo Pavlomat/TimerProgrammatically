@@ -147,7 +147,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @objc func action() {
         if !timerName.text!.isEmpty {
             if !timerCount.text!.isEmpty {
-                if !timerCount.text!.contains(",") {
+                if timerCount.text!.containsOnlyNumbers {
                     addTimer(name: timerName.text!, time: Int(timerCount.text!)!)
                     return
                 }
@@ -158,7 +158,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         present(ac, animated: true)
     }
     
-    //старт таймера с данными из текстовых полей и сортировка таймеров  порядке убывания
     func addTimer(name: String, time: Int) {
         myTimer.insert(MyTimer(name: name, time: time, vc: self), at: 0)
         myTimer.first?.setTimer()
@@ -169,15 +168,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.endEditing(true)
     }
     
-    func deleteCell(){  //метод удаляет истекший таймер
-        print("Deleted")
+    func deleteCell(){
         myTimer.removeLast()
         tableView.reloadData()
     }
     
-    func updateView() { //метод обновляет каждую секунду таймеры и тейбл вью
-//        print(myTimer)
+    func updateView() {
         myTimer.sort { $0.time > $1.time }
         tableView.reloadData()
+    }
+}
+
+extension String {
+    var containsOnlyNumbers: Bool {
+        let digitsCharacters = CharacterSet(charactersIn: "0123456789")
+        return CharacterSet(charactersIn: self).isSubset(of: digitsCharacters)
     }
 }
