@@ -11,8 +11,10 @@
 		BA9B0B4C292B944A00A23448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9B0B4B292B944A00A23448 /* SceneDelegate.swift */; };
 		BA9B0B53292B944B00A23448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9B0B52292B944B00A23448 /* Assets.xcassets */; };
 		BA9B0B56292B944B00A23448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9B0B54292B944B00A23448 /* LaunchScreen.storyboard */; };
-		BA9B0B5E292B94ED00A23448 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9B0B5D292B94ED00A23448 /* MainViewController.swift */; };
-		BAA0424D2939EE8B00C5A379 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0424C2939EE8B00C5A379 /* UILabel.swift */; };
+		BA9B0B5E292B94ED00A23448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9B0B5D292B94ED00A23448 /* ViewController.swift */; };
+		BAA0424D2939EE8B00C5A379 /* UILabelPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0424C2939EE8B00C5A379 /* UILabelPadding.swift */; };
+		BAA0424F293A043800C5A379 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0424E293A043800C5A379 /* TableViewCell.swift */; };
+		BAA04251293A044A00C5A379 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA04250293A044A00C5A379 /* TimerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +24,10 @@
 		BA9B0B52292B944B00A23448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA9B0B55292B944B00A23448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA9B0B57292B944B00A23448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA9B0B5D292B94ED00A23448 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		BAA0424C2939EE8B00C5A379 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		BA9B0B5D292B94ED00A23448 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAA0424C2939EE8B00C5A379 /* UILabelPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelPadding.swift; sourceTree = "<group>"; };
+		BAA0424E293A043800C5A379 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BAA04250293A044A00C5A379 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				BA9B0B49292B944A00A23448 /* AppDelegate.swift */,
 				BA9B0B4B292B944A00A23448 /* SceneDelegate.swift */,
-				BA9B0B5D292B94ED00A23448 /* MainViewController.swift */,
-				BAA0424C2939EE8B00C5A379 /* UILabel.swift */,
+				BA9B0B5D292B94ED00A23448 /* ViewController.swift */,
+				BAA0424E293A043800C5A379 /* TableViewCell.swift */,
+				BAA04250293A044A00C5A379 /* TimerModel.swift */,
+				BAA0424C2939EE8B00C5A379 /* UILabelPadding.swift */,
 				BA9B0B52292B944B00A23448 /* Assets.xcassets */,
 				BA9B0B54292B944B00A23448 /* LaunchScreen.storyboard */,
 				BA9B0B57292B944B00A23448 /* Info.plist */,
@@ -137,10 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA0424F293A043800C5A379 /* TableViewCell.swift in Sources */,
 				BA9B0B4A292B944A00A23448 /* AppDelegate.swift in Sources */,
 				BA9B0B4C292B944A00A23448 /* SceneDelegate.swift in Sources */,
-				BA9B0B5E292B94ED00A23448 /* MainViewController.swift in Sources */,
-				BAA0424D2939EE8B00C5A379 /* UILabel.swift in Sources */,
+				BAA04251293A044A00C5A379 /* TimerModel.swift in Sources */,
+				BA9B0B5E292B94ED00A23448 /* ViewController.swift in Sources */,
+				BAA0424D2939EE8B00C5A379 /* UILabelPadding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
