@@ -153,7 +153,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
             }
         }
-        let ac = UIAlertController(title: "Ошибка", message: "Неправильно задан таймер", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Error", message: "Incorrect timer", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .cancel))
         present(ac, animated: true)
     }
