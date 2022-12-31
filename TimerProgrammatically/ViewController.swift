@@ -108,7 +108,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             timerCount.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             timerCount.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75),
             timerCount.heightAnchor.constraint(equalTo: timerName.heightAnchor),
-
+            
             timerButton.topAnchor.constraint(equalToSystemSpacingBelow: timerCount.bottomAnchor, multiplier: 1),
             timerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             timerButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
@@ -123,10 +123,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myTimer.count
-   }
-   
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell else { fatalError() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell else { fatalError() }
         cell.nameLabel.text = myTimer[indexPath.row].name
         if myTimer[indexPath.row].min! > 9 {
             if myTimer[indexPath.row].sec! > 9 {
@@ -141,8 +141,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.timeLabel.text = "0\(myTimer[indexPath.row].min!):0\(myTimer[indexPath.row].sec!)"
             }
         }
-       return cell
-   }
+        return cell
+    }
     
     @objc func action() {
         if !timerName.text!.isEmpty {
@@ -185,3 +185,26 @@ extension String {
         return CharacterSet(charactersIn: self).isSubset(of: digitsCharacters)
     }
 }
+
+
+#if DEBUG
+import SwiftUI
+
+struct InfoVCRepresentable: UIViewControllerRepresentable {
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        // leave this empty
+    }
+    
+    @available(iOS 13.0.0, *)
+    func makeUIViewController(context: Context) -> UIViewController {
+        ViewController()
+    }
+}
+
+@available(iOS 13.0, *)
+struct InfoVCPreview: PreviewProvider {
+    static var previews: some View {
+        InfoVCRepresentable()
+    }
+}
+#endif
